@@ -364,7 +364,8 @@ namespace CryptoNote
         {0x67, 0x72, 0x65, 0x65, 0x6e, 0x73, 0x6f, 0x66, 0x74, 0x61, 0x6c, 0x62, 0x74, 0x72, 0x65, 0x65}};
 
     const char *const SEED_NODES[] = {
-        "seed1.core.treescoin.org:11897", // rock
-        "seed2.core.treescoin.org.:11897", // cision
+        "seed1.core.treescoin.org:11897",
+        "seed2.core.treescoin.org.:11897",
+        "seed3.core.treescoin.org.:11897",
     };
 } // namespace CryptoNote
