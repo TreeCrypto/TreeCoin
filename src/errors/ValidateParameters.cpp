@@ -403,7 +403,7 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
             printf("%s", ignore);
             printf("%s", ignore2);
             printf("%s", address);
-            printf(Utilities::parseAccountAddressString(ignore, ignore2, address));
+            Utilities::parseAccountAddressString(ignore, ignore2, address);
             return ADDRESS_NOT_VALID;
         }
     }
