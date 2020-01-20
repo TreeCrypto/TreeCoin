@@ -333,7 +333,8 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
         /* Address has the wrong prefix */
         if (address.substr(0, WalletConfig::addressPrefix.length()) != WalletConfig::addressPrefix)
         {
-            return "Prefix is: " + WalletConfig::addressPrefix + ADDRESS_WRONG_PREFIX;
+            printf("%s",WalletConfig::addressPrefix);
+            return ADDRESS_WRONG_PREFIX;
         }
 
         if (address.length() == WalletConfig::integratedAddressLength)
