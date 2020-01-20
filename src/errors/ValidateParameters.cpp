@@ -380,8 +380,8 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
             /* Convert from binary array to public keys */
             if (!CryptoNote::fromBinaryArray(addr, ba))
             {
-
-                return "Tried : " + CryptoNote::fromBinaryArray(addr, ba) + " Params are : " + addr + " "+ ba + ADDRESS_NOT_VALID;
+                printf("CryptoNote::fromBinaryArray");
+                return ADDRESS_NOT_VALID;
             }
 
             /* Convert the set of extracted keys back into an address, then
@@ -398,7 +398,8 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
 
         if (!Utilities::parseAccountAddressString(ignore, ignore2, address))
         {
-            return "Tried : "+ Utilities::parseAccountAddressString(ignore, ignore2, address) + " Params are: " +ignore + ignore2 + address + ADDRESS_NOT_VALID;
+            printf("Utilities::parseAccountAddressString(ignore, ignore2, address)");
+            return ADDRESS_NOT_VALID;
         }
     }
 
