@@ -397,15 +397,15 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
         /* Not used */
         CryptoNote::AccountPublicAddress ignore2;
 
-        if (!Utilities::parseAccountAddressString(ignore, ignore2, address))
-        {
-            printf("Utilities::parseAccountAddressString(ignore, ignore2, address)");
-            printf("%s", ignore);
-            printf("%s", ignore2);
-            printf("%s", address);
-            Utilities::parseAccountAddressString(ignore, ignore2, address);
-            return ADDRESS_NOT_VALID;
-        }
+        // if (!Utilities::parseAccountAddressString(ignore, ignore2, address))
+        // {
+        //     printf("Utilities::parseAccountAddressString(ignore, ignore2, address)");
+        //     printf("%s", ignore);
+        //     printf("%s", ignore2);
+        //     printf("%s", address);
+        //     Utilities::parseAccountAddressString(ignore, ignore2, address);
+        //     return ADDRESS_NOT_VALID;
+        // }
     }
 
     return SUCCESS;
