@@ -333,7 +333,7 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
         /* Address has the wrong prefix */
         if (address.substr(0, WalletConfig::addressPrefix.length()) != WalletConfig::addressPrefix)
         {
-            return ADDRESS_WRONG_PREFIX;
+            return "Prefix is: " + WalletConfig::addressPrefix + ADDRESS_WRONG_PREFIX;
         }
 
         if (address.length() == WalletConfig::integratedAddressLength)
@@ -380,7 +380,8 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
             /* Convert from binary array to public keys */
             if (!CryptoNote::fromBinaryArray(addr, ba))
             {
-                return ADDRESS_NOT_VALID;
+
+                return "Tried : " + CryptoNote::fromBinaryArray(addr, ba) + " Params are : " + addr + " "+ ba + ADDRESS_NOT_VALID;
             }
 
             /* Convert the set of extracted keys back into an address, then
@@ -397,7 +398,7 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
 
         if (!Utilities::parseAccountAddressString(ignore, ignore2, address))
         {
-            return ADDRESS_NOT_VALID;
+            return "Tried : "+ Utilities::parseAccountAddressString(ignore, ignore2, address) + " Params are: " +ignore + ignore2 + address + ADDRESS_NOT_VALID;
         }
     }
 
