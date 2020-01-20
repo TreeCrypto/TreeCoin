@@ -400,6 +400,10 @@ Error validateAddresses(std::vector<std::string> addresses, const bool integrate
         if (!Utilities::parseAccountAddressString(ignore, ignore2, address))
         {
             printf("Utilities::parseAccountAddressString(ignore, ignore2, address)");
+            printf("%s", ignore);
+            printf("%s", ignore2);
+            printf("%s", address);
+            printf(Utilities::parseAccountAddressString(ignore, ignore2, address));
             return ADDRESS_NOT_VALID;
         }
     }
